@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string>main-icon.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.chetansurpur.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -30,13 +30,13 @@
 	<string>Sidestep</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
-	<key>SUPublicDSAKeyFile</key>
-	<string>dsa_pub.pem</string>
+	<key>SUEnableAutomaticChecks</key>
+	<string>true</string>
 	<key>SUFeedURL</key>
 	<string>http://chetansurpur.com/projects/sidestep/appcast.xml</string>
+	<key>SUPublicDSAKeyFile</key>
+	<string>dsa_pub.pem</string>
 	<key>SUShowReleaseNotes</key>
-	<string>true</string>
-	<key>SUEnableAutomaticChecks</key>
 	<string>true</string>
 </dict>
 </plist>
