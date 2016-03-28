@@ -179,6 +179,14 @@ NSInteger GrowlSpam_TestConnection					= 0;
 	[statusItem setImage:statusImageDirectSecure];
 	[statusItem setAlternateImage:statusImageDirectSecure];
 	
+    
+    // Enable template for Yosemite dark menu bar support
+    if (! (floor(NSAppKitVersionNumber) <= NSAppKitVersionNumber10_9)) {
+        [statusImageDirectInsecure setTemplate:YES];
+        [statusImageDirectSecure setTemplate:YES];
+        [statusImageReroutedSecure setTemplate:YES];
+    }
+    
 	// Check for updates if not first run and check for updates is enabled
 	if ([defaultsController ranAtleastOnce] && [[SUUpdater sharedUpdater] automaticallyChecksForUpdates]) {
 		XLog(self, @"Checking for updates");
@@ -195,7 +203,7 @@ NSInteger GrowlSpam_TestConnection					= 0;
 		[self setRunOnLogin:TRUE];
 		
 		[defaultsController setGrowlSetting:TRUE];
-    [defaultsController setUserNotificationSetting:TRUE];
+        [defaultsController setUserNotificationSetting:TRUE];
 		[defaultsController setCompressSSHConnection:FALSE];
 		
 		// Show welcome window
