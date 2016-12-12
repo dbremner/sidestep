@@ -168,9 +168,9 @@ NSInteger GrowlSpam_TestConnection					= 0;
 	NSBundle *bundle = [NSBundle mainBundle];
 	
 	// Allocates and loads the images into the application which will be used for our NSStatusItem
-	statusImageDirectInsecure = [[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"direct-insecure-icon" ofType:@"png"]];
-	statusImageDirectSecure = [[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"direct-secure-icon" ofType:@"png"]];
-	statusImageReroutedSecure = [[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"rerouted-secure-icon" ofType:@"png"]];
+	statusImageDirectInsecure = [[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"direct-insecure-icon" ofType:@"tiff"]];
+	statusImageDirectSecure = [[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"direct-secure-icon" ofType:@"tiff"]];
+	statusImageReroutedSecure = [[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"rerouted-secure-icon" ofType:@"tiff"]];
 	
 	// Sets the default images in our NSStatusItem
 	[statusItem setImage:statusImageDirectSecure];
