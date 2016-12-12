@@ -477,6 +477,7 @@
 				GCC_PREFIX_HEADER = Sidestep_Prefix.pch;
 				INFOPLIST_FILE = "Sidestep-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chetansurpur.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Sidestep;
 				SDKROOT = macosx;
@@ -498,6 +499,7 @@
 				GCC_PREFIX_HEADER = Sidestep_Prefix.pch;
 				INFOPLIST_FILE = "Sidestep-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chetansurpur.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Sidestep;
 				SDKROOT = macosx;
