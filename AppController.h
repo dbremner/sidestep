@@ -18,7 +18,7 @@
 #import "AppUtilities.h"
 #import "GrowlMessage.h"
 
-@interface AppController : NSObject <GrowlApplicationBridgeDelegate> { //<NSApplicationDelegate> {
+@interface AppController : NSObject { //<NSApplicationDelegate> {
     NSWindow *window;
 	
 	IBOutlet NSMenu *statusMenu;
@@ -96,7 +96,5 @@
 - (void)selectProxyClicked :(id)sender;
 - (void)connectProxyClicked :(id)sender;
 - (void)disconnectProxyClicked :(id)sender;
-
-- (NSDictionary *) registrationDictionaryForGrowl;
 
 @end

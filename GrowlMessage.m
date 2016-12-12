@@ -7,7 +7,6 @@
 //
 
 #import "GrowlMessage.h"
-#import <Growl/Growl.h>
 
 @interface GrowlMessage ()
 - (void)sendUserNotificationMessage:(NSString*)message;
@@ -38,16 +37,6 @@
 
 - (void) message: (NSString *)sendMessage {
 	
-	if([setting boolForKey:@"sidestep_GrowlSetting"] == TRUE) {
-		[GrowlApplicationBridge notifyWithTitle: @"Sidestep"
-								description: sendMessage
-								notificationName:@"GrowlNotification"
-								iconData: nil
-								priority: 0
-								isSticky: NO
-								clickContext: nil];
-	}
-  
   if ([setting boolForKey:@"sidestep_UserNotificationSetting"] == TRUE)
   {
     [self sendUserNotificationMessage:sendMessage];

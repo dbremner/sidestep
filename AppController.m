@@ -159,9 +159,6 @@ NSInteger GrowlSpam_TestConnection					= 0;
 	// Update UI for the selected proxy
 	[self updateUIForSelectedProxy];
 	
-	// Growl
-	[GrowlApplicationBridge setGrowlDelegate:self];
-	
 	// Create status menu item
 	statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
 	[statusItem setMenu:statusMenu];
@@ -202,8 +199,7 @@ NSInteger GrowlSpam_TestConnection					= 0;
 		[defaultsController setRunOnLogin:TRUE];
 		[self setRunOnLogin:TRUE];
 		
-		[defaultsController setGrowlSetting:TRUE];
-        [defaultsController setUserNotificationSetting:TRUE];
+		[defaultsController setUserNotificationSetting:TRUE];
 		[defaultsController setCompressSSHConnection:FALSE];
 		
 		// Show welcome window
@@ -219,12 +215,7 @@ NSInteger GrowlSpam_TestConnection					= 0;
 		[defaultsController setRemotePortNumber:@"22"];
     }
 	
-	// Enable Growl if preference is not found (user updated from previous version / has already completed 1st run)
-    if (![defaultsController getGrowlSetting]) {
-		[defaultsController setGrowlSetting:TRUE];
-    }
-  
-  // Enable UserNotification Center
+    // Enable UserNotification Center
     if (![defaultsController getUserNotificationSetting])
     {
       [defaultsController setUserNotificationSetting:TRUE];
@@ -419,31 +410,6 @@ NSInteger GrowlSpam_TestConnection					= 0;
 	
 }
 
-/*
-- (void)setGrowlSetting :(BOOL)value {
-	if (value) {
-		XLog(self, @"Enabling Growl Notification");
-		[defaultsController setGrowlSetting:TRUE];
-		[self setGrowlSetting:TRUE];
-	}
-	else {
-		XLog(self, @"Disabling Growl Notification");
-	}
-
-}
- */
-
-- (NSDictionary *) registrationDictionaryForGrowl {
-	NSArray *notifications;
-	notifications = [NSArray arrayWithObject:@"GrowlNotification"];
-	
-	NSDictionary *dict;
-	dict = [NSDictionary dictionaryWithObjectsAndKeys:
-			notifications, GROWL_NOTIFICATIONS_ALL,
-			notifications, GROWL_NOTIFICATIONS_DEFAULT, nil];
-	
-	return (dict);
-}
 
 /*
  *	Threads

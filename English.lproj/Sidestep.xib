@@ -779,12 +779,12 @@
                                         <button id="785">
                                             <rect key="frame" x="16" y="122" width="327" height="18"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="check" title="Enable Growl notifications" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="786">
+                                            <buttonCell key="cell" type="check" title="Enable notifications" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="786">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
                                             <connections>
-                                                <binding destination="570" name="value" keyPath="values.sidestep_GrowlSetting" id="788"/>
+                                                <binding destination="570" name="value" keyPath="values.sidestep_UserNotificationSetting" id="rUh-Wi-CvX"/>
                                             </connections>
                                         </button>
                                         <box verticalHuggingPriority="750" boxType="separator" id="769">
